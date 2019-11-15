@@ -6,5 +6,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Angular-Material';
+  public show: Boolean = true;
+  title = 'Rahul Kumar';
+  constructor() {
+    const currentpath = window.location.pathname;
+    if (currentpath === '/') {
+      this.show = false;
+    } else {
+      this.show = true;
+    }
+  }
 }

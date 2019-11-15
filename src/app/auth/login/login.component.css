@@ -1,0 +1,75 @@
+main {
+  height: 100%;
+  display: grid;
+  margin: auto;
+  align-items: center;
+  background-image: url('../../../assets/back.jpg');
+  background-repeat: no-repeat, repeat;
+  background-size: 100vw 100vh;
+}
+
+mat-card {
+  min-height: 320px;
+  min-width: 200px;
+  max-height: 50vh;
+  max-width: 50vw;
+  width: 25%;
+  height: 30%;
+  display: grid;
+  margin: 0 auto;
+}
+
+mat-card-header {
+  margin: 0 auto;
+  align-items: center;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+mat-card-subtitle {
+  font-size: 3rem;
+  font-weight: bolder;
+  text-decoration: underline;
+  text-decoration-color: blueviolet;
+  padding: 0;
+  margin: 0;
+}
+
+mat-card-content {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: "Login";
+  font-size: 18px;
+
+}
+
+.Login {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: "email" "password";
+  grid-area: Login;
+}
+
+.email {
+  grid-area: email;
+}
+
+.password {
+  grid-area: password;
+}
+
+.mat-card>.mat-card-actions:last-child {
+  margin: 0 auto;
+  padding: 0;
+  align-items: center;
+}
+
+.login {
+  font-size: 25px;
+}
+
+.signup {
+  font-size: 25px;
+}
