@@ -1,17 +1,20 @@
+@import url('https://fonts.googleapis.com/css?family=Gupter:500&display=swap');
+
 .grid-container {
   display: grid;
   grid-template-columns: 0.05fr 1fr 0.05fr;
   grid-template-rows: 5fr;
   grid-template-areas: ". body .";
-  height: 92%;
+  height: 90%;
 }
 
 .body {
   display: grid;
-  grid-template-columns: 0.5fr 1.5fr 1.5fr 1.5fr 0.5fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr;
-  grid-template-areas: ". . image . ."". info-personal info-professional info-professional ."". info-personal info-professional info-professional ."". info-personal info-professional info-professional .";
+  grid-template-columns: 0.05fr 1fr 0.05fr;
+  grid-template-rows: 0.5fr 0.02fr 1fr;
+  grid-template-areas: ". image .""hr-line hr-line hr-line""data-body data-body data-body";
   grid-area: body;
+  margin: 10px 0 0 0;
 }
 
 .image {
@@ -20,16 +23,54 @@
   max-width: 20vh;
   max-height: 20vh;
   padding-top: 15px;
-  height: 120px;
-  width: 120px;
+  height: 150px;
+  width: 150px;
   border-bottom-left-radius: 50%;
   border-bottom-right-radius: 50%;
   text-align: center;
   overflow: auto;
-  background-image: url("../../assets/rahul.jpg"); /* The image used */
+  background-image: url("../../assets/rahul.jpg");
   background-position: center;
-  background-size: cover; 
-  z-index: 1000;
+  background-size: cover;
+  -webkit-box-shadow: 0px 0px 20px -5px rgba(0, 0, 0, 0.52);
+  -moz-box-shadow: 0px 0px 20px -5px rgba(0, 0, 0, 0.52);
+  box-shadow: 0px 0px 20px -5px rgba(0, 0, 0, 0.52);
+  border-bottom: 5px solid black;
+  border-right: 1px solid black;
+  border-left: 1px solid black;
+  border-top: 0.5px solid black;
+}
+
+.hr-line {
+  margin: 10px 0 10px 0;
+  grid-area: hr-line;
+  border-bottom: 2px solid black;
+  border-radius: 100%;
+}
+
+.data-body {
+  grid-area: data-body;
+  display: grid;
+  grid-template-columns: 0.5fr 1.5fr 0.05fr 1.5fr 0.5fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas:
+    "info-personal info-personal fill-gap info-professional info-professional"
+    "info-personal info-personal fill-gap info-professional info-professional"
+    "info-personal info-personal fill-gap info-professional info-professional";
+  -webkit-box-shadow: 0px 0px 20px -5px rgba(0, 0, 0, 0.52);
+  -moz-box-shadow: 0px 0px 20px -5px rgba(0, 0, 0, 0.52);
+  box-shadow: 0px 0px 20px -5px rgba(0, 0, 0, 0.52);
+  padding: 10px;
+}
+
+.fill-gap {
+    grid-area: fill-gap;
+    width: 100%;
+}
+
+h2 {
+    font-family: 'Gupter', serif;
+    text-decoration: underline;
 }
 
 .info-personal {
