@@ -10,7 +10,7 @@ export class AppComponent {
   title = 'Rahul Kumar';
   constructor() {
     const currentpath = window.location.pathname;
-    if (currentpath === '/') {
+    if (currentpath === '/login' || currentpath === '/signup') {
       this.show = false;
     } else {
       this.show = true;

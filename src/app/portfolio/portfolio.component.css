@@ -1,0 +1,63 @@
+.grid-container {
+  display: grid;
+  grid-template-columns: 0.05fr 1fr 0.05fr;
+  grid-template-rows: 5fr;
+  grid-template-areas: ". body .";
+  height: 92%;
+}
+
+.body {
+  display: grid;
+  grid-template-columns: 0.5fr 1.5fr 1.5fr 1.5fr 0.5fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-areas: ". . image . ."". info-personal info-professional info-professional ."". info-personal info-professional info-professional ."". info-personal info-professional info-professional .";
+  grid-area: body;
+}
+
+.image {
+  grid-area: image;
+  margin: auto;
+  max-width: 20vh;
+  max-height: 20vh;
+  padding-top: 15px;
+  height: 120px;
+  width: 120px;
+  border-bottom-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+  text-align: center;
+  overflow: auto;
+  background-image: url("../../assets/rahul.jpg"); /* The image used */
+  background-position: center;
+  background-size: cover; 
+  z-index: 1000;
+}
+
+.info-personal {
+  grid-area: info-personal;
+}
+
+.info-professional {
+  grid-area: info-professional;
+}
+
+
+
+
+
+
+/* 
+    Other Page CSS
+    .grid-container {
+    display: grid;
+    grid-template-columns: 0.05fr 1fr 0.05fr;
+    grid-template-rows: 1fr 5fr 0.5fr;
+    grid-template-areas: ". Headder ." ". body ." ". footer .";
+    height: 108.5%;
+  }
+  
+  .Headder { grid-area: Headder; }
+  
+  .footer { grid-area: footer; }
+  
+  .body { grid-area: body; }
+  */

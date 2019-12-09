@@ -1,0 +1,17 @@
+/* .grid-container {
+    display: grid;
+    grid-template-columns: 0.05fr 1fr 0.05fr;
+    grid-template-rows: 1fr 5fr 0.5fr;
+    grid-template-areas: ". Headder ." ". body ." ". footer .";
+    height: 108.5%;
+  }
+
+  .hide-it{
+    display: none;
+  }
+  
+  .Headder { grid-area: Headder; }
+  
+  .footer { grid-area: footer; }
+  
+  .body { grid-area: body; } */
