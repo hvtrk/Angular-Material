@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Gupter:500&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap');
 
 .grid-container {
   display: grid;
@@ -79,9 +80,21 @@ h2 {
 
 .info-professional {
   grid-area: info-professional;
+  padding: 10px;
+  font-family: 'Josefin Sans', sans-serif;
 }
 
+ul{
+    list-style-type: none;
+}
 
+ul li {
+    padding: 10px 0;
+}
+
+ul li mat-progress-bar{
+    height: 40px;
+}
 
 
 
