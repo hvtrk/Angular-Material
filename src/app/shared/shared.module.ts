@@ -8,7 +8,9 @@ import {
   MatCardModule,
   MatToolbarModule,
   MatFormFieldModule,
-  MatProgressBarModule
+  MatProgressBarModule,
+  MatSidenavModule,
+  MatListModule
 } from '@angular/material';
 import { FormsModule } from '@angular/forms';
 
@@ -26,7 +28,12 @@ import { FormsModule } from '@angular/forms';
     MatCardModule,
     MatToolbarModule,
     MatFormFieldModule,
-    MatProgressBarModule
+    MatProgressBarModule,
+    MatToolbarModule,
+    MatSidenavModule,
+    MatListModule,
+    MatButtonModule,
+    MatIconModule
   ],
   exports: [
     FormsModule,
@@ -37,7 +44,12 @@ import { FormsModule } from '@angular/forms';
     MatCardModule,
     MatToolbarModule,
     MatFormFieldModule,
-    MatProgressBarModule
+    MatProgressBarModule,
+    MatToolbarModule,
+    MatSidenavModule,
+    MatListModule,
+    MatButtonModule,
+    MatIconModule
   ]
 })
 export class SharedModule { }

@@ -1,4 +1,54 @@
-<mat-toolbar color="primary" *ngIf="show">
+<!-- <mat-toolbar color="primary" *ngIf="show">
   Rahul Kumar
-</mat-toolbar>
-<router-outlet></router-outlet>
+</mat-toolbar> -->
+<button
+  *ngIf="show"
+  mat-icon-button
+  class="small-show"
+  style="
+    margin: 15px;
+    position: absolute;
+    z-index: 10000;
+    width: 50px;
+    background-color: white;
+    color: black;">
+    <mat-icon (click)="sidenav.toggle()">menu</mat-icon>
+</button>
+<div *ngIf="!show">
+  <mat-toolbar color="primary">
+    <mat-toolbar-row>
+      <button mat-icon-button class="small-show">
+        <mat-icon (click)="sidenav.toggle()">menu</mat-icon>
+      </button>
+      <h1>Rahul Kumar</h1>
+      <span class="menu-spacer"></span>
+      <div class="small-hide">
+        <a mat-button [routerLink]="'/login'"> Login </a>
+        <a mat-button [routerLink]="'/signup'"> Create Account </a>
+        <a mat-button [routerLink]="'/portfolio'"> Portfolio </a>
+        <!-- <a mat-button [routerLink]="'/create-contact'"> Create Contact </a>
+        <a mat-button [routerLink]="'/activities'"> Activities </a>
+        <a mat-button [routerLink]="'/create-activity'"> Create Activity </a> -->
+      </div>
+    </mat-toolbar-row>
+  </mat-toolbar>
+</div>
+
+<mat-sidenav-container>
+  <mat-sidenav #sidenav class="small-show">
+    <mat-nav-list style="margin: 50px 5px 0 5px; display: grid;">
+      <a mat-button [routerLink]="'/login'"> Login </a>
+      <a mat-button [routerLink]="'/signup'"> Create Account </a>
+      <a mat-button [routerLink]="'/portfolio'"> Portfolio </a>
+      <!-- <a mat-list-item [routerLink]="'/create-contact'"> Create Contact </a>
+      <a mat-list-item [routerLink]="'/activities'"> Activities </a>
+      <a mat-list-item [routerLink]="'/create-activity'"> Create Activity </a> -->
+      <a mat-list-item (click)="sidenav.toggle()" href="" mat-list-item>Close</a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <div style="height: 100vh;">
+      <router-outlet></router-outlet>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>

@@ -1,0 +1,9 @@
+.grid-container {
+    display: grid;
+    margin: auto;
+    height: 90%;
+}
+
+h1 {
+    margin: auto;
+}

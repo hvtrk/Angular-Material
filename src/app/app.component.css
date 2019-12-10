@@ -15,3 +15,25 @@
   .footer { grid-area: footer; }
   
   .body { grid-area: body; } */
+
+  .menu-spacer {
+    margin: 0 auto;
+  }
+
+  .small-show {
+    display: none;
+  }
+
+  .small-hide {
+    display: block;
+  }
+
+  @media only screen and (max-width: 600px) {
+    .small-show {
+      display: block !important;
+    }
+
+    .small-hide {
+      display: none !important;
+    }
+  }

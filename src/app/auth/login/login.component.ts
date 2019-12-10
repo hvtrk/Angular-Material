@@ -12,7 +12,6 @@ export class LoginComponent implements OnInit {
   hide = true;
 
   getErrorMessage(feild, error, message) {
-    console.log(this.loginForm.controls[feild]);
     if (this.loginForm.controls[feild].dirty) {
       return this.loginForm.get(feild).hasError('required') ? 'You must enter a value' : 
         this.loginForm.controls[feild].hasError(error) ? `Not valid ${message}`  : '';
